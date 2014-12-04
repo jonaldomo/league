@@ -1,0 +1,9 @@
+<h1>{{ object.name }}</h1>
+<h2>Leagues</h2>
+<ul>
+{% for league in leagues %}
+    <li><a href="/{{ league.slug }}">{{ league.name }}</a></li>
+{% empty %}
+    <li>No leagues yet.</li>
+{% endfor %}
+</ul>
